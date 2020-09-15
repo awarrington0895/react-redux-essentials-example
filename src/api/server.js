@@ -136,7 +136,8 @@ new Server({
       comments: hasMany()
     }),
     comment: Model.extend({
-      post: belongsTo()
+      post: belongsTo(),
+      comments: belongsTo()
     }),
     notification: Model.extend({})
   },
@@ -185,7 +186,7 @@ new Server({
         };
       },
       afterCreate(post, server) {
-        //server.createList('comment', 3, { post })
+        server.createList("comment", 3, { post });
       },
 
       user: association()
