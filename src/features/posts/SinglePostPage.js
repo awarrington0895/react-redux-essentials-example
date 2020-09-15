@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import PostAuthor from "./PostAuthor";
 import ReactionButtons from "./ReactionButtons";
 import { selectPostById } from "./postsSlice";
-import Comment from "../comments/Comment";
-import { selectCommentsByPost, fetchComments } from "../comments/commentsSlice";
+import { selectCommentsByPost, fetchComments, Comment } from "../comments";
 
 import "./SinglePostPage.scss";
 

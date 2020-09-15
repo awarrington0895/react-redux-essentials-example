@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import PostAuthor from "./PostAuthor";
 import ReactionButtons from "./ReactionButtons";
-import { useSelector } from "react-redux";
 import { selectPostById } from "./postsSlice";
+import { Post } from "./post";
 
-const PostExcerpt = ({ postId }) => {
-  const post = useSelector((state) => selectPostById(state, postId));
+type Props = { postId: string };
+
+const PostExcerpt: React.FC<Props> = ({ postId }) => {
+  const post: Post = useSelector((state) => selectPostById(state, postId));
 
   return (
     <article className="post-excerpt" key={postId}>

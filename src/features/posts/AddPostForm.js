@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { unwrapResult } from "@reduxjs/toolkit";
 
 import { addNewPost } from "./postsSlice";
-import { selectAllUsers } from "../users/usersSlice";
+import { selectAllUsers } from "../users";
 
 const AddPostForm = () => {
   const [title, setTitle] = useState("");

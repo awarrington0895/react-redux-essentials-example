@@ -1,10 +1,14 @@
 import React from "react";
 
-import TimeAgo from "../posts/TimeAgo";
+import TimeAgo from "../../shared/TimeAgo";
 
 import "./Comment.scss";
 
-const Comment = ({ comment }) => {
+type Comment = { text: string; date: string };
+
+type Props = { comment: Comment };
+
+const Comment: React.FC<Props> = ({ comment }) => {
   return (
     <div className="post-excerpt">
       <p>{comment.text}</p>
